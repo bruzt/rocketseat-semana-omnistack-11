@@ -18,11 +18,11 @@ export default function Incidents() {
 
     useEffect(() => {
 
-        getincidents();
+        getIncidents();
 
     }, []);
 
-    async function getincidents(){
+    async function getIncidents(){
 
         if(loadingState) return;
         if(totalState > 0 && incidentsState.length === totalState) return;
@@ -60,7 +60,7 @@ export default function Incidents() {
 
             <IncidentsFlatList 
                 showsVerticalScrollIndicator={false}
-                onEndReached={getincidents}
+                onEndReached={getIncidents}
                 onEndReachedThreshold={0.2}
                 data={incidentsState}
                 keyExtractor={(incident, index) => String(index)}
