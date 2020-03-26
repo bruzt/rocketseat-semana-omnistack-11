@@ -86,8 +86,8 @@ export default function Register() {
                             onChange={(event) => setCity(event.target.value)} 
                         />
                         <Input 
-                            placeholder='UF' 
-                            style={{ width: 80 }} 
+                            id='uf-input'
+                            placeholder='UF'
                             value={ufState} 
                             onChange={(event) => setUf(event.target.value)} 
                         />
@@ -154,5 +154,9 @@ const Container = styled.div`
 
     .content form .input-group input + input {
         margin-left: 8px;
+    }
+
+    .content form .input-group input#uf-input {
+        width: 80px;
     }
 `;

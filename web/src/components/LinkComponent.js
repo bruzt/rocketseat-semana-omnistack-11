@@ -2,11 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-export default function LinkComponent({ to, children, style }) {
+export default function LinkComponent(props) {
     
     return (
-        <LinkStyled to={to} style={style}>
-            {children}
+        <LinkStyled {...props}>
+            {props.children}
         </LinkStyled>
     );
 }

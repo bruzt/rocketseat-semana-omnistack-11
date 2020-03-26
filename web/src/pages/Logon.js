@@ -8,7 +8,7 @@ import api from '../services/api';
 import heroesImage from '../assets/heroes.png';
 import logoImage from '../assets/logo.svg';
 
-import SubmitButton from '../components/ButtonComponent';
+import Button from '../components/ButtonComponent';
 import Input from '../components/InputComponent';
 import Link from '../components/LinkComponent';
 
@@ -50,7 +50,7 @@ export default function Logon() {
 
                     <Input type="text" placeholder='Sua ID' value={idState} onChange={(event) => setId(event.target.value)} />
 
-                    <SubmitButton type='submit'>Entrar</SubmitButton>
+                    <Button type='submit'>Entrar</Button>
 
                     <Link to='/register'>
                         <FiLogIn size={16} color="#E02041" />

@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export default function Input({ type = 'text', placeholder, value, onChange, style }) {
+export default function Input(props) {
 
     return (
-        <InputStyled type={type} placeholder={placeholder} value={value} onChange={onChange} style={style} />
+        <InputStyled {...props} />
     );
 }
 

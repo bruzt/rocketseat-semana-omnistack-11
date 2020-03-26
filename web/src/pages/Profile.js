@@ -99,7 +99,7 @@ export default function Profile() {
                 <img src={logoImage} alt="logo Image"/>
                 <span>Bem vinda, {ongName}</span>
 
-                <Button onClick={() => history.push('/incidents/new')} style={{ width: 260, marginLeft: 'auto', marginTop: 0 }}>
+                <Button id='new-incident-button' onClick={() => history.push('/incidents/new')}>
                     Cadastrar novo caso
                 </Button>
                 <button id='logoff' onClick={handleLogOut}>
@@ -135,6 +135,12 @@ const Container = styled.div`
     header span {
         font-size: 20px;
         margin-left: 24px;
+    }
+
+    header button#new-incident-button {
+        width: 260px;
+        margin-left: auto;
+        margin-top: 0px;
     }
 
     header button#logoff {
