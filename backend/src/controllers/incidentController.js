@@ -31,9 +31,6 @@ module.exports = {
         const ong_id = req.headers.authorization;
         const { title, description, value  } = req.body;
 
-        if(!ong_id) return res.status(400).json({ error: 'authorization is required' });
-        if(!title || !description || !value) return res.status(400).json({ error: 'all fields must be filled' });
-
         try {
 
             const ong = await db('ongs').where('id', ong_id);
@@ -59,8 +56,6 @@ module.exports = {
 
         const { id } = req.params;
         const ong_id = req.headers.authorization;
-
-        if(!ong_id) return res.status(400).json({ error: 'authorization is required' });
 
         try {
 

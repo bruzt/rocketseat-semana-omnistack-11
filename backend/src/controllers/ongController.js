@@ -1,4 +1,4 @@
-const crypto = require('crypto');
+const generateUniqueId = require('../utils/generateUniqueId');
 
 const db = require('../database/connection');
 
@@ -22,9 +22,7 @@ module.exports = {
 
         const { name, email, whatsapp, city, uf } = req.body;
 
-        if(!name || !email || !whatsapp || !city || !uf) return res.status(400).json({ error: 'all fields must be filled'});
-
-        const id = crypto.randomBytes(4).toString('HEX');
+        const id = generateUniqueId();
 
         try {
             
